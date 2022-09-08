@@ -9,9 +9,12 @@ import Foundation
 import AVFoundation
 import UIKit
 import VideoToolbox
+import Vision
 
 @objc(CameraView)
 class CameraView: UIView, AVCapturePhotoCaptureDelegate, AVCaptureVideoDataOutputSampleBufferDelegate {
+    
+    var detector: Detector?
 
     private let captureButtonSize = 75.0
     private let captureButtonMargin = 16.0
@@ -36,6 +39,9 @@ class CameraView: UIView, AVCapturePhotoCaptureDelegate, AVCaptureVideoDataOutpu
     var backCameraOn = true
 
     public func openCamera() {
+        
+        detector = Detector()
+        
         setupCaptureButton()
         setupFlipCameraButton()
         switch AVCaptureDevice.authorizationStatus(for: .video) {
@@ -318,6 +324,9 @@ class CameraView: UIView, AVCapturePhotoCaptureDelegate, AVCaptureVideoDataOutpu
             return
             // TODO(T92857704) Eventually forward Error to React Native using promises
         }
+        
+        let detectedProducts: [VNRecognizedObjectObservation] = detector!.detect(cvBuffer)
+        
         let ciImage = CIImage(cvImageBuffer: cvBuffer)
         let imageFrame = Image(image: ciImage)
         let ref = JSContext.wrapObject(object: imageFrame).getJSRef()

@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.platforms    = { :ios => "12.0" }
   s.source       = { :git => "https://github.com/pytorch/live.git", :tag => "#{s.version}" }
 
-  s.source_files = "ios/**/*.{h,m,mm,swift,cpp}", "cxx/src/**/*.{h,cpp}"
+  s.source_files = "ios/**/*.{h,m,mm,swift,cpp}", "cxx/src/**/*.{h,cpp}","ios/ProductRecognition/best.mlmodel"
 
   s.swift_version = "5.0"
 

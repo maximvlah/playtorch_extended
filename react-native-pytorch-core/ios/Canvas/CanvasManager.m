@@ -6,7 +6,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "React/RCTViewManager.h"
+#import <React/RCTViewManager.h>
 
 @interface RCT_EXTERN_REMAP_MODULE(PyTorchCoreCanvasView, CanvasManager, RCTViewManager)
 RCT_EXPORT_VIEW_PROPERTY(onContext2D, RCTBubblingEventBlock)

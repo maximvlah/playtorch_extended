@@ -38,6 +38,8 @@
 		38C0DDB226E59E88003007B6 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C0DDB126E59E88003007B6 /* Image.swift */; };
 		38C0DDB426E59EDD003007B6 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C0DDB326E59EDD003007B6 /* ImageUtils.swift */; };
 		38C1F3CC26E5A2B9004BD31B /* ImageDataImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C1F3CB26E5A2B9004BD31B /* ImageDataImage.swift */; };
+		482622B928C9F8CD009C62F8 /* Detector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482622B828C9F8CD009C62F8 /* Detector.swift */; };
+		482622BB28C9F926009C62F8 /* best.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 482622BA28C9F926009C62F8 /* best.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,6 +88,8 @@
 		38C0DDB126E59E88003007B6 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		38C0DDB326E59EDD003007B6 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 		38C1F3CB26E5A2B9004BD31B /* ImageDataImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataImage.swift; sourceTree = "<group>"; };
+		482622B828C9F8CD009C62F8 /* Detector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detector.swift; sourceTree = "<group>"; };
+		482622BA28C9F926009C62F8 /* best.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = best.mlmodel; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* PyTorchCore-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PyTorchCore-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,9 +186,19 @@
 			path = ML;
 			sourceTree = SOURCE_ROOT;
 		};
+		482622B728C9F8A8009C62F8 /* ProductRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				482622BA28C9F926009C62F8 /* best.mlmodel */,
+				482622B828C9F8CD009C62F8 /* Detector.swift */,
+			);
+			path = ProductRecognition;
+			sourceTree = "<group>";
+		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				482622B728C9F8A8009C62F8 /* ProductRecognition */,
 				386E479327AF9DA200839701 /* Media */,
 				3884B0B9288FB2D900F7CF6E /* ML */,
 				387E702026E16F43003BB6F5 /* Camera */,
@@ -256,6 +270,7 @@
 				387E704526E16F43003BB6F5 /* CameraManager.m in Sources */,
 				3884B0C0288FB2D900F7CF6E /* ModelUtils.swift in Sources */,
 				387E704726E16F43003BB6F5 /* CameraManager.swift in Sources */,
+				482622B928C9F8CD009C62F8 /* Detector.swift in Sources */,
 				387E704226E16F43003BB6F5 /* ShapeLayer.swift in Sources */,
 				387E705626E16F43003BB6F5 /* ImageModule.m in Sources */,
 				387E704826E16F43003BB6F5 /* JSContext.swift in Sources */,
@@ -281,6 +296,7 @@
 				387E704326E16F43003BB6F5 /* CGContextExtension.swift in Sources */,
 				387E705726E16F43003BB6F5 /* ImageModule.swift in Sources */,
 				3884B0BF288FB2D900F7CF6E /* ModelLoaderModule.m in Sources */,
+				482622BB28C9F926009C62F8 /* best.mlmodel in Sources */,
 				3884B0C1288FB2D900F7CF6E /* ModelLoaderModule.swift in Sources */,
 				386E479927AF9E0300839701 /* BlobUtils.swift in Sources */,
 				387E705426E16F43003BB6F5 /* BitmapImage.swift in Sources */,

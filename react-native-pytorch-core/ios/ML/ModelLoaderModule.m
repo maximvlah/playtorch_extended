@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import "React/RCTBridgeModule.h"
+#import <React/RCTBridgeModule.h>
 
 @interface RCT_EXTERN_REMAP_MODULE(PyTorchCoreModelLoaderModule, ModelLoaderModule, NSObject)
 RCT_EXTERN_METHOD(download:(nonnull NSString)modelPath resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject);
